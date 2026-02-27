@@ -1,0 +1,29 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate marketplace.json
+        run: python3 -m json.tool .claude-plugin/marketplace.json > /dev/null
+      - name: Check required fields
+        run: |
+          python3 -c "
+          import json
+          with open('.claude-plugin/marketplace.json') as f:
+              data = json.load(f)
+          assert 'name' in data, 'Missing name'
+          assert 'plugins' in data, 'Missing plugins'
+          for p in data['plugins']:
+              assert 'name' in p, f'Plugin missing name'
+              assert 'source' in p, f'Plugin {p[\"name\"]} missing source'
+              assert 'description' in p, f'Plugin {p[\"name\"]} missing description'
+          print(f'Validated {len(data[\"plugins\"])} plugins')
+          "
