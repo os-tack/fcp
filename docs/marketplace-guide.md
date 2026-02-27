@@ -8,44 +8,79 @@ Your server must:
 
 1. **Implement the 4-tool contract** — `{domain}`, `{domain}_query`, `{domain}_session`, `{domain}_help`
 2. **Depend on fcp-core** — Use the shared tokenizer, verb registry, and session management
-3. **Include `.claude-plugin/plugin.json`** — With `mcpServers` config for zero-config installation
+3. **Include `.claude-plugin/plugin.json`** — Plugin metadata
+4. **Include `.mcp.json`** — MCP server configuration for zero-config installation
 
-## plugin.json Schema
+## Plugin Structure
+
+Every FCP server plugin has this structure:
+
+```
+fcp-yourserver/
+├── .claude-plugin/
+│   └── plugin.json       ← Plugin metadata only
+├── .mcp.json             ← MCP server config (separate from plugin.json)
+├── src/                  ← Your server code
+├── dist/                 ← Built output
+└── ...
+```
+
+## plugin.json
+
+Metadata only — no component configuration. Use kebab-case names without npm scopes.
 
 ```json
 {
-  "name": "@scope/fcp-yourserver",
+  "name": "fcp-yourserver",
   "description": "One-line description of what it does",
   "version": "0.1.0",
   "license": "MIT",
-  "author": "Your Name",
-  "repository": "https://github.com/org/fcp-yourserver",
-  "keywords": ["relevant", "keywords", "mcp"],
-  "mcpServers": {
-    "fcp-yourserver": {
-      "command": "node",
-      "args": ["node_modules/@scope/fcp-yourserver/dist/index.js"]
-    }
+  "author": {
+    "name": "Your Name"
   },
-  "skills": [
-    {
-      "id": "yourserver",
-      "name": "Human-Readable Name",
-      "description": "What this server lets you do"
-    }
-  ]
+  "repository": "https://github.com/org/fcp-yourserver",
+  "keywords": ["relevant", "keywords", "mcp"]
 }
 ```
 
-For Python servers, use `"command": "python"` with `"args": ["-m", "your_module.main"]`.
+## .mcp.json
 
-## Marketplace Entry
+MCP server configuration at the plugin root. Use `${CLAUDE_PLUGIN_ROOT}` for paths.
 
-Add an entry to `.claude-plugin/marketplace.json`:
+**TypeScript servers:**
 
 ```json
 {
-  "name": "@scope/fcp-yourserver",
+  "mcpServers": {
+    "fcp-yourserver": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/dist/index.js"]
+    }
+  }
+}
+```
+
+**Python servers:**
+
+```json
+{
+  "mcpServers": {
+    "fcp-yourserver": {
+      "command": "uv",
+      "args": ["run", "python", "-m", "your_module"],
+      "cwd": "${CLAUDE_PLUGIN_ROOT}"
+    }
+  }
+}
+```
+
+## Marketplace Entry
+
+Add an entry to `.claude-plugin/marketplace.json`. Plugin names are kebab-case identifiers (not npm/PyPI package names).
+
+```json
+{
+  "name": "fcp-yourserver",
   "source": { "source": "github", "repo": "org/fcp-yourserver" },
   "description": "One-line description",
   "version": "0.1.0",

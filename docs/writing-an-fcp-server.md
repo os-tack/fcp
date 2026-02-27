@@ -20,11 +20,22 @@ Every FCP server exposes exactly 4 MCP tools:
 
 ## Architecture Pattern
 
-FCP servers follow a consistent layered architecture:
+FCP servers follow a layered architecture. Most formats need 3 layers; spatial/visual formats (like diagrams or slides) may need a 4th layout layer.
+
+**3-layer (most formats):**
 
 1. **MCP Server (Intent Layer)** — Parses op strings via fcp-core tokenizer, resolves references, dispatches to verb handlers
 2. **Semantic Model (Domain)** — In-memory domain graph with event sourcing for undo/redo
-3. **Serialization** — Semantic model to/from target format (XML, HCL, binary, etc.)
+3. **Serialization** — Semantic model to/from target format (HCL, MIDI binary, YAML, etc.)
+
+**4-layer (spatial/visual formats):**
+
+1. **Intent Layer** — Same as above
+2. **Semantic Model** — Entity graph with spatial properties
+3. **Layout** — Auto-positioning, collision avoidance, spatial reasoning
+4. **Serialization** — To target format (XML, SVG, etc.)
+
+The layer count reflects the domain: fcp-terraform and fcp-midi use 3 layers because HCL is text and MIDI is a time sequence. fcp-drawio uses 4 because spatial layout is a separate concern from the semantic model.
 
 ## Getting Started
 
@@ -33,12 +44,21 @@ FCP servers follow a consistent layered architecture:
 3. Implement a domain adapter (see fcp-core's `FcpAdapter` interface)
 4. Wire it up with `createFcpServer()` / `create_fcp_server()`
 
+## Plugin Configuration
+
+FCP servers are distributed as Claude Code plugins. Each server needs:
+
+- **`.claude-plugin/plugin.json`** — Metadata only (name, version, description, author)
+- **`.mcp.json`** — MCP server config using `${CLAUDE_PLUGIN_ROOT}` for paths
+
+See the [Marketplace Guide](./marketplace-guide.md) for the exact schemas.
+
 ## Full Specification
 
 See the [FCP spec](https://github.com/aetherwing-io/fcp-core/tree/main/spec) in fcp-core for the complete grammar, tool, session, and event specifications.
 
 ## Publishing
 
-1. Add `.claude-plugin/plugin.json` with `mcpServers` and `skills` fields
+1. Add `.claude-plugin/plugin.json` (metadata) and `.mcp.json` (server config)
 2. Publish to npm or PyPI
 3. Submit a PR to add your server to the [marketplace catalog](./../.claude-plugin/marketplace.json)

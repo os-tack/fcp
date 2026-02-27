@@ -1,0 +1,11 @@
+{
+  "name": "fcp-yourdomain",
+  "description": "TODO: One-line description of your FCP server",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "TODO: Your Name"
+  },
+  "repository": "TODO: https://github.com/org/fcp-yourdomain",
+  "keywords": ["TODO", "mcp"]
+}
