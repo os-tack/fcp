@@ -16,7 +16,8 @@ TERRAFORM = fcp-terraform
 CORE_PY   = fcp-core/python
 MIDI      = fcp-midi
 
-CONSUMERS = $(DRAWIO) $(TERRAFORM)
+CONSUMERS_TS = $(DRAWIO) $(TERRAFORM)
+CONSUMERS    = $(CONSUMERS_TS) $(MIDI)
 
 .PHONY: setup link unlink build build-core build-drawio build-terraform \
         test test-core-ts test-core-py test-drawio test-terraform test-midi \
@@ -31,6 +32,8 @@ setup: ## Install all deps, create npm links, configure git hooks
 	cd $(DRAWIO) && npm install
 	@echo "==> Installing fcp-terraform..."
 	cd $(TERRAFORM) && npm install
+	@echo "==> Installing fcp-midi..."
+	cd $(MIDI) && uv sync --dev
 	@echo "==> Creating npm links..."
 	$(MAKE) link
 	@echo "==> Configuring git hooks..."
@@ -44,17 +47,17 @@ setup: ## Install all deps, create npm links, configure git hooks
 
 # ─── Linking ─────────────────────────────────────────────────────────
 
-link: build-core ## Build fcp-core, npm link globally, link into consumers
+link: build-core ## Build fcp-core, npm link globally, link into TS consumers
 	@echo "==> Registering @aetherwing/fcp-core globally..."
 	cd $(CORE_TS) && npm link
-	@for repo in $(CONSUMERS); do \
+	@for repo in $(CONSUMERS_TS); do \
 		echo "==> Linking into $$repo..."; \
 		cd $$repo && npm link @aetherwing/fcp-core && cd ..; \
 	done
 	@echo "==> Links active. Run 'make link' again after any 'npm install'."
 
 unlink: ## Remove links, restore registry versions
-	@for repo in $(CONSUMERS); do \
+	@for repo in $(CONSUMERS_TS); do \
 		echo "==> Unlinking in $$repo..."; \
 		cd $$repo && npm unlink @aetherwing/fcp-core && npm install && cd ..; \
 	done
@@ -113,7 +116,7 @@ status: ## Git status + link status across all repos
 	done
 	@echo ""
 	@echo "=== npm Link Status ==="
-	@for repo in $(CONSUMERS); do \
+	@for repo in $(CONSUMERS_TS); do \
 		echo ""; \
 		echo "--- $$repo ---"; \
 		if [ -L "$$repo/node_modules/@aetherwing/fcp-core" ]; then \
@@ -122,9 +125,18 @@ status: ## Git status + link status across all repos
 			echo "  @aetherwing/fcp-core: registry (not linked)"; \
 		fi; \
 	done
+	@echo ""
+	@echo "=== Python Link Status ==="
+	@echo ""
+	@echo "--- $(MIDI) ---"
+	@if cd $(MIDI) && uv pip show fcp-core 2>/dev/null | grep -q 'Editable'; then \
+		echo "  fcp-core: editable (linked)"; \
+	else \
+		echo "  fcp-core: registry (not linked)"; \
+	fi
 
-check-refs: ## Verify no file: references in any package.json
-	@echo "Checking for file: references..."
+check-refs: ## Verify no local path references in any package.json/pyproject.toml
+	@echo "Checking for local path references..."
 	@found=0; \
 	for f in $(CORE_TS)/package.json $(DRAWIO)/package.json $(TERRAFORM)/package.json; do \
 		if grep -q '"file:' "$$f"; then \
@@ -132,6 +144,10 @@ check-refs: ## Verify no file: references in any package.json
 			found=1; \
 		fi; \
 	done; \
+	if grep -v '^\s*#' $(MIDI)/pyproject.toml | grep -q 'path\s*='; then \
+		echo "  FAIL: $(MIDI)/pyproject.toml contains an uncommented path reference"; \
+		found=1; \
+	fi; \
 	if [ $$found -eq 0 ]; then \
 		echo "  All clean."; \
 	else \
