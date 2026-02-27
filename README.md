@@ -6,11 +6,11 @@ FCP is to MCP what React is to the DOM — the LLM thinks in domain operations, 
 
 ## Servers
 
-| Server | Domain | Description |
-|--------|--------|-------------|
-| [fcp-drawio](https://github.com/aetherwing-io/fcp-drawio) | Diagrams | Create and edit draw.io diagrams through intent-level commands |
-| [fcp-midi](https://github.com/aetherwing-io/fcp-midi) | Music | Compose MIDI music through semantic operations |
-| [fcp-terraform](https://github.com/aetherwing-io/fcp-terraform) | Infrastructure | Generate Terraform HCL through resource declarations |
+| Server | Install | Domain | Description |
+|--------|---------|--------|-------------|
+| [fcp-drawio](https://github.com/aetherwing-io/fcp-drawio) | `npm i @aetherwing/fcp-drawio` | Diagrams | Create and edit draw.io diagrams through intent-level commands |
+| [fcp-midi](https://github.com/aetherwing-io/fcp-midi) | `pip install fcp-midi` | Music | Compose MIDI music through semantic operations |
+| [fcp-terraform](https://github.com/aetherwing-io/fcp-terraform) | `npm i @aetherwing/fcp-terraform` | Infrastructure | Generate Terraform HCL through resource declarations |
 
 ## How It Works
 

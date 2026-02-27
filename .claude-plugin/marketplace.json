@@ -7,7 +7,7 @@
   },
   "plugins": [
     {
-      "name": "fcp-drawio",
+      "name": "@aetherwing/fcp-drawio",
       "source": { "source": "github", "repo": "aetherwing-io/fcp-drawio" },
       "description": "MCP server for creating/editing draw.io diagrams",
       "version": "0.1.0",
@@ -25,7 +25,7 @@
       "keywords": ["midi", "music", "composition"]
     },
     {
-      "name": "fcp-terraform",
+      "name": "@aetherwing/fcp-terraform",
       "source": { "source": "github", "repo": "aetherwing-io/fcp-terraform" },
       "description": "MCP server for Terraform HCL generation",
       "version": "0.1.0",
