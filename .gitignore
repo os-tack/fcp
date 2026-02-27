@@ -1,7 +1,2 @@
-fcp-core/
-fcp-drawio/
-fcp-midi/
-fcp-terraform/
-test/
-archive/
 .DS_Store
+node_modules/

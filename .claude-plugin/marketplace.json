@@ -10,7 +10,7 @@
       "name": "@aetherwing/fcp-drawio",
       "source": { "source": "github", "repo": "aetherwing-io/fcp-drawio" },
       "description": "MCP server for creating/editing draw.io diagrams",
-      "version": "0.1.0",
+      "version": "0.2.1",
       "license": "MIT",
       "category": "development",
       "keywords": ["drawio", "diagrams", "architecture"]
@@ -28,7 +28,7 @@
       "name": "@aetherwing/fcp-terraform",
       "source": { "source": "github", "repo": "aetherwing-io/fcp-terraform" },
       "description": "MCP server for Terraform HCL generation",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "license": "MIT",
       "category": "devops",
       "keywords": ["terraform", "hcl", "infrastructure"]

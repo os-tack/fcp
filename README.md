@@ -43,6 +43,10 @@ output instance_ip value:"aws_instance.web.public_ip"
 
 All servers are built on [fcp-core](https://github.com/aetherwing-io/fcp-core), which provides the tokenizer, verb registry, event log (undo/redo), session management, and server factory. Available in both TypeScript and Python.
 
+## Marketplace
+
+The plugin catalog is maintained in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json).
+
 ## Installation
 
 Each server is installed independently. See individual repos for setup instructions.
