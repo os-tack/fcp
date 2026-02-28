@@ -6,6 +6,7 @@ Guide for building new FCP servers that plug into the marketplace.
 
 - [fcp-core](https://github.com/aetherwing-io/fcp-core) (TypeScript: `@aetherwing/fcp-core`, Python: `fcp-core`)
 - Familiarity with the FCP grammar: `VERB [positionals...] [key:value params...] [@selectors...]`
+- For Go implementations, see [fcp-terraform](https://github.com/aetherwing-io/fcp-terraform) which ports fcp-core internally
 
 ## The 4-Tool Contract
 
@@ -39,9 +40,9 @@ The layer count reflects the domain: fcp-terraform and fcp-midi use 3 layers bec
 
 ## Getting Started
 
-1. Use the `templates/fcp-starter/` scaffold
+1. Use the `templates/fcp-starter/` scaffold (TypeScript/Python)
 2. Register your verbs with the fcp-core verb registry
-3. Implement a domain adapter (see fcp-core's `FcpAdapter` interface)
+3. Implement a domain adapter (see fcp-drawio's adapter.ts for a real-world example)
 4. Wire it up with `createFcpServer()` / `create_fcp_server()`
 
 ## Plugin Configuration
@@ -60,5 +61,5 @@ See the [FCP spec](https://github.com/aetherwing-io/fcp-core/tree/main/spec) in 
 ## Publishing
 
 1. Add `.claude-plugin/plugin.json` (metadata) and `.mcp.json` (server config)
-2. Publish to npm or PyPI
+2. Publish to npm, PyPI, or GitHub Releases (Go binaries)
 3. Submit a PR to add your server to the [marketplace catalog](./../.claude-plugin/marketplace.json)

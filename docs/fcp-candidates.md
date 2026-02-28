@@ -9,7 +9,7 @@ Three criteria: (1) format complexity that defeats raw LLM output, (2) clean map
 | Server | Package | Category | Description |
 |--------|---------|----------|-------------|
 | fcp-drawio | @aetherwing/fcp-drawio | development | draw.io diagram creation/editing |
-| fcp-terraform | @aetherwing/fcp-terraform | devops | Terraform HCL generation |
+| fcp-terraform | github.com/aetherwing-io/fcp-terraform | devops | Terraform HCL generation (Go) |
 | fcp-midi | fcp-midi | creative | Semantic MIDI composition |
 
 ## Tier 1 — High Value, Natural Fit

@@ -10,7 +10,7 @@ FCP is to MCP what React is to the DOM — the LLM thinks in domain operations, 
 |--------|---------|--------|-------------|
 | [fcp-drawio](https://github.com/aetherwing-io/fcp-drawio) | `npm i @aetherwing/fcp-drawio` | Diagrams | Create and edit draw.io diagrams through intent-level commands |
 | [fcp-midi](https://github.com/aetherwing-io/fcp-midi) | `pip install fcp-midi` | Music | Compose MIDI music through semantic operations |
-| [fcp-terraform](https://github.com/aetherwing-io/fcp-terraform) | `npm i @aetherwing/fcp-terraform` | Infrastructure | Generate Terraform HCL through resource declarations |
+| [fcp-terraform](https://github.com/aetherwing-io/fcp-terraform) | `go install github.com/aetherwing-io/fcp-terraform/cmd/fcp-terraform@latest` | Infrastructure | Generate Terraform HCL through resource declarations |
 
 ## How It Works
 
@@ -41,7 +41,7 @@ output instance_ip value:"aws_instance.web.public_ip"
 
 ## Shared Framework
 
-All servers are built on [fcp-core](https://github.com/aetherwing-io/fcp-core), which provides the tokenizer, verb registry, event log (undo/redo), session management, and server factory. Available in both TypeScript and Python.
+Most servers are built on [fcp-core](https://github.com/aetherwing-io/fcp-core), which provides the tokenizer, verb registry, event log (undo/redo), session management, and server factory. Available in TypeScript and Python. fcp-terraform is a standalone Go implementation using hclwrite natively.
 
 ## Marketplace
 

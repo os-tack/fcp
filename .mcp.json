@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "terraform": {
+      "command": "fcp-terraform"
+    },
+    "drawio": {
+      "command": "npx",
+      "args": ["-y", "@aetherwing/fcp-drawio"]
+    },
+    "midi": {
+      "command": "uvx",
+      "args": ["fcp-midi"]
+    }
+  }
+}

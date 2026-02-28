@@ -9,31 +9,13 @@
   },
   "plugins": [
     {
-      "name": "fcp-drawio",
-      "source": { "source": "github", "repo": "aetherwing-io/fcp-drawio" },
-      "description": "Create and edit draw.io diagrams through intent-level commands",
-      "version": "0.2.1",
-      "license": "MIT",
-      "category": "development",
-      "keywords": ["drawio", "diagrams", "architecture"]
-    },
-    {
-      "name": "fcp-midi",
-      "source": { "source": "github", "repo": "aetherwing-io/fcp-midi" },
-      "description": "Semantic MIDI music composition",
+      "name": "fcp",
+      "source": { "source": "github", "repo": "aetherwing-io/fcp" },
+      "description": "MCP servers for diagrams, infrastructure, and music",
       "version": "0.1.0",
       "license": "MIT",
-      "category": "creative",
-      "keywords": ["midi", "music", "composition"]
-    },
-    {
-      "name": "fcp-terraform",
-      "source": { "source": "github", "repo": "aetherwing-io/fcp-terraform" },
-      "description": "Generate Terraform HCL through resource declarations",
-      "version": "0.1.2",
-      "license": "MIT",
-      "category": "devops",
-      "keywords": ["terraform", "hcl", "infrastructure"]
+      "category": "development",
+      "keywords": ["fcp", "drawio", "terraform", "midi", "mcp"]
     }
   ]
 }
