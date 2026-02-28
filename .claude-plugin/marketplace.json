@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "FCP plugin marketplace — MCP servers for complex file formats",
-    "version": "0.2.0"
+    "version": "0.2.1"
   },
   "plugins": [
     {
       "name": "fcp",
       "source": ".",
       "description": "File Context Protocol — MCP servers for diagrams, infrastructure, and music",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "license": "MIT",
       "category": "development",
       "keywords": ["fcp", "mcp", "drawio", "terraform", "midi"]
