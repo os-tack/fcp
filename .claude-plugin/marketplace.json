@@ -1,21 +1,21 @@
 {
-  "name": "fcp-marketplace",
+  "name": "fcp-plugins",
   "owner": {
     "name": "Scott Meyer"
   },
   "metadata": {
-    "description": "File Context Protocol — MCP servers that let LLMs interact with complex file formats through a verb-based DSL",
-    "version": "0.1.0"
+    "description": "FCP plugin marketplace — MCP servers for complex file formats",
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "fcp",
-      "source": { "source": "github", "repo": "aetherwing-io/fcp" },
-      "description": "MCP servers for diagrams, infrastructure, and music",
-      "version": "0.1.0",
+      "source": ".",
+      "description": "File Context Protocol — MCP servers for diagrams, infrastructure, and music",
+      "version": "0.2.0",
       "license": "MIT",
       "category": "development",
-      "keywords": ["fcp", "drawio", "terraform", "midi", "mcp"]
+      "keywords": ["fcp", "mcp", "drawio", "terraform", "midi"]
     }
   ]
 }
