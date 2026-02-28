@@ -9,7 +9,7 @@
     },
     "midi": {
       "command": "uvx",
-      "args": ["fcp-midi"]
+      "args": ["--python", "3.13", "fcp-midi"]
     }
   }
 }
