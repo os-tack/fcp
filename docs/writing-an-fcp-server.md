@@ -45,6 +45,18 @@ The layer count reflects the domain: fcp-terraform and fcp-midi use 3 layers bec
 3. Implement a domain adapter (see fcp-drawio's adapter.ts for a real-world example)
 4. Wire it up with `createFcpServer()` / `create_fcp_server()`
 
+## Python: Suppressing Structured Output
+
+Python FCP servers built with `create_fcp_server()` handle this automatically. If you register tools directly on FastMCP (bypassing fcp-core), add `structured_output=False` to every `@mcp.tool()` decorator:
+
+```python
+@mcp.tool(name=f"{domain}_help", structured_output=False)
+def get_help() -> str:
+    return reference_card
+```
+
+Without this, FastMCP wraps return values in a `{"result":"..."}` JSON envelope as `structuredContent`, which differs from the raw text response that TypeScript MCP servers produce. The `structured_output=False` flag suppresses this envelope for consistent behavior across all FCP servers.
+
 ## Plugin Configuration
 
 FCP servers are distributed as Claude Code plugins. Each server needs:
