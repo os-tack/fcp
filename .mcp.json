@@ -10,6 +10,10 @@
     "midi": {
       "command": "uvx",
       "args": ["--python", "3.13", "fcp-midi"]
+    },
+    "sheets": {
+      "command": "uvx",
+      "args": ["--python", "3.13", "fcp-sheets"]
     }
   }
 }
