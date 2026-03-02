@@ -1,0 +1,18 @@
+{
+  "description": "FCP preflight — checks for required dependencies on session start",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "once": true,
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/preflight.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
