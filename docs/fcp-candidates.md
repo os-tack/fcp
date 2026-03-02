@@ -11,6 +11,8 @@ Three criteria: (1) format complexity that defeats raw LLM output, (2) clean map
 | fcp-drawio | @aetherwing/fcp-drawio | development | draw.io diagram creation/editing |
 | fcp-terraform | github.com/aetherwing-io/fcp-terraform | devops | Terraform HCL generation (Go) |
 | fcp-midi | fcp-midi | creative | Semantic MIDI composition |
+| fcp-sheets | fcp-sheets | documents | Semantic spreadsheet creation/editing |
+| fcp-slides | fcp-slides | documents | Semantic PowerPoint presentation creation |
 
 ## Tier 1 — High Value, Natural Fit
 
@@ -27,31 +29,6 @@ Three criteria: (1) format complexity that defeats raw LLM output, (2) clean map
   - `add text "Hello" at:100,50 size:14`
   - `group background,wave as:Header`
 - **Status:** Draft spec exists (`fcp-core/docs/drafts/fcp-svg-spec-draft.md`)
-
-### Spreadsheets / XLSX (fcp-sheets)
-
-- **Category:** documents
-- **Format:** XLSX / ODS (Open XML zipped archives)
-- **Why:** Everyone asks LLMs to "make me a spreadsheet." The actual Open XML format is a nightmare — multiple XML files in a zip with shared string tables, cell references, style indices.
-- **Semantic model:** Worksheets containing Cells, Formulas, Ranges, Charts, Tables as first-class objects
-- **Example ops:**
-  - `sheet Sales`
-  - `header A:E "Region" "Q1" "Q2" "Q3" "Total"`
-  - `write "Monthly Sales" to:Sheet1!A1 style:header`
-  - `formula E2 sum:B2:D2`
-  - `chart bar data:A1:E5 title:"Sales by Region"`
-
-### PowerPoint / PPTX (fcp-slides)
-
-- **Category:** documents
-- **Format:** PPTX (Open XML)
-- **Why:** Same Open XML complexity as Excel, and a perennial LLM ask. Could compose with fcp-drawio for embedded diagrams.
-- **Semantic model:** Presentation with Slides, Layouts, Shapes, Text, Images, Transitions
-- **Example ops:**
-  - `slide title:"Architecture Overview"`
-  - `add diagram from:drawio_session`
-  - `bullet "Key insight" indent:1`
-  - `add image path:"chart.png" at:center size:60%`
 
 ## Tier 2 — Specialized but High Impact
 

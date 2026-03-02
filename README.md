@@ -16,7 +16,7 @@ FCP is a Claude Code marketplace plugin. Add it to your `settings.json`:
 }
 ```
 
-This installs all four FCP servers automatically. Prerequisites by server:
+This installs all five FCP servers automatically. Prerequisites by server:
 
 | Server | Requires |
 |--------|----------|
@@ -24,6 +24,7 @@ This installs all four FCP servers automatically. Prerequisites by server:
 | fcp-midi | Python 3.13+ |
 | fcp-terraform | Go |
 | fcp-sheets | Python 3.13+ |
+| fcp-slides | Python 3.13+ |
 
 ## Quick Start
 
@@ -69,6 +70,7 @@ Every FCP server follows this same pattern: `session` → `mutations` → `query
 | [fcp-midi](https://github.com/aetherwing-io/fcp-midi) | MIDI music | Notes, chords, tracks, instruments |
 | [fcp-terraform](https://github.com/aetherwing-io/fcp-terraform) | Terraform HCL | AWS/GCP/Azure infrastructure |
 | [fcp-sheets](https://github.com/aetherwing-io/fcp-sheets) | Excel spreadsheets | Tables, formulas, charts, formatting |
+| [fcp-slides](https://github.com/aetherwing-io/fcp-slides) | PowerPoint presentations | Slides, shapes, tables, charts, layouts |
 
 ## What the LLM Sees
 
@@ -122,6 +124,17 @@ Every mutation returns a prefixed response and a digest line summarizing the cur
 
 + Wrote 3 rows at A1
 1 sheets, ~6 cells
+```
+
+**Presentations** — slides, shapes, and a deck-state digest:
+
+```
+> slides(["slide add layout:title", "placeholder set title \"Q4 Review\"", "placeholder set subtitle \"Finance Team\""])
+
++ slide 1 (Title Slide)
+~ placeholder title = "Q4 Review"
+~ placeholder subtitle = "Finance Team"
+[1 slide 3 shapes]
 ```
 
 ## How It Works

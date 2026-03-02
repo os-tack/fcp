@@ -14,6 +14,10 @@
     "sheets": {
       "command": "uvx",
       "args": ["--refresh-package", "fcp-sheets", "--python", "3.13", "fcp-sheets"]
+    },
+    "slides": {
+      "command": "uvx",
+      "args": ["--refresh-package", "fcp-slides", "--python", "3.13", "fcp-slides"]
     }
   }
 }
