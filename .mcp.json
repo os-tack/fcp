@@ -9,11 +9,11 @@
     },
     "midi": {
       "command": "uvx",
-      "args": ["--python", "3.13", "fcp-midi"]
+      "args": ["--refresh-package", "fcp-midi", "--python", "3.13", "fcp-midi"]
     },
     "sheets": {
       "command": "uvx",
-      "args": ["--python", "3.13", "fcp-sheets"]
+      "args": ["--refresh-package", "fcp-sheets", "--python", "3.13", "fcp-sheets"]
     }
   }
 }
