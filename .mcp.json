@@ -19,6 +19,10 @@
     "slides": {
       "command": "uvx",
       "args": ["--refresh-package", "fcp-slides", "--python", "3.13", "fcp-slides"]
+    },
+    "rust": {
+      "command": "bash",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/run-rust.sh"]
     }
   }
 }

@@ -4,18 +4,18 @@
     "name": "Scott Meyer"
   },
   "metadata": {
-    "description": "FCP plugin marketplace — MCP servers for complex file formats",
-    "version": "0.2.18"
+    "description": "FCP plugin marketplace — MCP servers for complex file formats and Rust codebases",
+    "version": "0.2.19"
   },
   "plugins": [
     {
       "name": "fcp",
       "source": "./",
-      "description": "File Context Protocol — MCP servers for diagrams, infrastructure, music, spreadsheets, and presentations",
-      "version": "0.2.18",
+      "description": "File Context Protocol — MCP servers for diagrams, infrastructure, music, spreadsheets, presentations, and Rust codebases",
+      "version": "0.2.19",
       "license": "MIT",
       "category": "development",
-      "keywords": ["fcp", "mcp", "drawio", "terraform", "midi", "sheets", "slides"]
+      "keywords": ["fcp", "mcp", "drawio", "terraform", "midi", "sheets", "slides", "rust"]
     }
   ]
 }
