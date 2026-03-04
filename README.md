@@ -16,13 +16,14 @@ FCP is a Claude Code marketplace plugin. Add it to your `settings.json`:
 }
 ```
 
-This installs all five FCP servers automatically. Prerequisites by server:
+This installs all six FCP servers automatically. Prerequisites by server:
 
 | Server | Requires |
 |--------|----------|
 | fcp-drawio | Node.js |
 | fcp-midi | Python 3.13+ |
 | fcp-terraform | Go |
+| fcp-rust | rust-analyzer |
 | fcp-sheets | Python 3.13+ |
 | fcp-slides | Python 3.13+ |
 
@@ -69,6 +70,7 @@ Every FCP server follows this same pattern: `session` → `mutations` → `query
 | [fcp-drawio](https://github.com/aetherwing-io/fcp-drawio) | draw.io diagrams | Architecture diagrams, flowcharts, ERDs |
 | [fcp-midi](https://github.com/aetherwing-io/fcp-midi) | MIDI music | Notes, chords, tracks, instruments |
 | [fcp-terraform](https://github.com/aetherwing-io/fcp-terraform) | Terraform HCL | AWS/GCP/Azure infrastructure |
+| [fcp-rust](https://github.com/aetherwing-io/fcp-rust) | Rust codebases | Navigation, inspection, refactoring via rust-analyzer |
 | [fcp-sheets](https://github.com/aetherwing-io/fcp-sheets) | Excel spreadsheets | Tables, formulas, charts, formatting |
 | [fcp-slides](https://github.com/aetherwing-io/fcp-slides) | PowerPoint presentations | Slides, shapes, tables, charts, layouts |
 
@@ -117,6 +119,27 @@ Every mutation returns a prefixed response and a digest line summarizing the cur
 2 blocks, 1 resource, 1 variable
 ```
 
+**Rust** — symbol navigation, diagnostics, and refactoring:
+
+```
+> rust_session("open /path/to/my-project")
+
+! session opened: /path/to/my-project (42 .rs files)
+```
+
+```
+> rust_query("find Config @kind:struct")
+
+Config (struct) src/config.rs:12
+  fields: name, port, database_url
+```
+
+```
+> rust(["rename old_handler handle_request @file:routes.rs"])
+
+~ renamed old_handler → handle_request (3 references updated)
+```
+
 **Spreadsheets** — data blocks and a sheet-state digest:
 
 ```
@@ -148,7 +171,7 @@ Every FCP server exposes exactly 4 MCP tools:
 | `{domain}_session(action)` | Lifecycle: new, open, save, undo, redo |
 | `{domain}_help()` | Self-documenting reference card |
 
-Most servers are built on [fcp-core](https://github.com/aetherwing-io/fcp-core) (TypeScript + Python). fcp-terraform is standalone Go using hclwrite natively.
+Most servers are built on [fcp-core](https://github.com/aetherwing-io/fcp-core) (TypeScript + Python). fcp-terraform (Go) and fcp-rust (Rust) are standalone implementations.
 
 ## Links
 
