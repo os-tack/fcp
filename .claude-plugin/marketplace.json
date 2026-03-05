@@ -5,17 +5,71 @@
   },
   "metadata": {
     "description": "FCP plugin marketplace — MCP servers for complex file formats and Rust codebases",
-    "version": "0.2.19"
+    "version": "0.2.20"
   },
   "plugins": [
     {
       "name": "fcp",
       "source": "./",
-      "description": "File Context Protocol — MCP servers for diagrams, infrastructure, music, spreadsheets, presentations, and Rust codebases",
-      "version": "0.2.19",
+      "description": "All FCP servers — diagrams, infrastructure, music, spreadsheets, presentations, and Rust codebases",
+      "version": "0.2.20",
       "license": "MIT",
       "category": "development",
       "keywords": ["fcp", "mcp", "drawio", "terraform", "midi", "sheets", "slides", "rust"]
+    },
+    {
+      "name": "fcp-drawio",
+      "source": {"source": "github", "repo": "aetherwing-io/fcp-drawio"},
+      "description": "Create and edit draw.io diagrams through intent-level commands",
+      "version": "0.2.9",
+      "license": "MIT",
+      "category": "development",
+      "keywords": ["drawio", "diagrams", "architecture", "mcp"]
+    },
+    {
+      "name": "fcp-terraform",
+      "source": {"source": "github", "repo": "aetherwing-io/fcp-terraform"},
+      "description": "Generate Terraform HCL through resource declarations",
+      "version": "0.1.7",
+      "license": "MIT",
+      "category": "devops",
+      "keywords": ["terraform", "hcl", "infrastructure", "mcp"]
+    },
+    {
+      "name": "fcp-midi",
+      "source": {"source": "github", "repo": "aetherwing-io/fcp-midi"},
+      "description": "Semantic MIDI music composition",
+      "version": "0.1.9",
+      "license": "MIT",
+      "category": "creative",
+      "keywords": ["midi", "music", "composition", "mcp"]
+    },
+    {
+      "name": "fcp-sheets",
+      "source": {"source": "github", "repo": "aetherwing-io/fcp-sheets"},
+      "description": "Semantic spreadsheet operations for LLMs",
+      "version": "0.1.12",
+      "license": "MIT",
+      "category": "documents",
+      "keywords": ["spreadsheet", "excel", "xlsx", "mcp"]
+    },
+    {
+      "name": "fcp-slides",
+      "source": {"source": "github", "repo": "aetherwing-io/fcp-slides"},
+      "description": "Create and edit PowerPoint presentations through semantic commands",
+      "version": "0.1.2",
+      "license": "MIT",
+      "category": "documents",
+      "keywords": ["slides", "powerpoint", "pptx", "presentations", "mcp"]
+    },
+    {
+      "name": "fcp-rust",
+      "source": {"source": "github", "repo": "aetherwing-io/fcp-rust"},
+      "description": "Query and refactor Rust codebases through intent-level commands",
+      "version": "0.1.2",
+      "license": "MIT",
+      "category": "development",
+      "keywords": ["rust", "rust-analyzer", "refactoring", "mcp"]
     }
   ]
 }
