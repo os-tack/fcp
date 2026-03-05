@@ -23,6 +23,10 @@
     "rust": {
       "command": "bash",
       "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/run-rust.sh"]
+    },
+    "regex": {
+      "command": "bash",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/run-regex.sh"]
     }
   }
 }

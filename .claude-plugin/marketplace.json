@@ -4,18 +4,18 @@
     "name": "Scott Meyer"
   },
   "metadata": {
-    "description": "FCP plugin marketplace — MCP servers for complex file formats and Rust codebases",
+    "description": "FCP plugin marketplace — MCP servers for complex file formats, Rust codebases, and regex construction",
     "version": "0.2.20"
   },
   "plugins": [
     {
       "name": "fcp",
       "source": "./",
-      "description": "All FCP servers — diagrams, infrastructure, music, spreadsheets, presentations, and Rust codebases",
+      "description": "All FCP servers — diagrams, infrastructure, music, spreadsheets, presentations, Rust codebases, and regex construction",
       "version": "0.2.20",
       "license": "MIT",
       "category": "development",
-      "keywords": ["fcp", "mcp", "drawio", "terraform", "midi", "sheets", "slides", "rust"]
+      "keywords": ["fcp", "mcp", "drawio", "terraform", "midi", "sheets", "slides", "rust", "regex"]
     },
     {
       "name": "fcp-drawio",
@@ -70,6 +70,15 @@
       "license": "MIT",
       "category": "development",
       "keywords": ["rust", "rust-analyzer", "refactoring", "mcp"]
+    },
+    {
+      "name": "fcp-regex",
+      "source": {"source": "github", "repo": "aetherwing-io/fcp-regex"},
+      "description": "Build regexes via named fragment composition — no raw syntax, no escaping burden",
+      "version": "0.1.0",
+      "license": "MIT",
+      "category": "development",
+      "keywords": ["regex", "pattern-matching", "composition", "mcp"]
     }
   ]
 }
