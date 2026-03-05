@@ -16,7 +16,7 @@ FCP is a Claude Code marketplace plugin. Add it to your `settings.json`:
 }
 ```
 
-This installs all six FCP servers automatically. Prerequisites by server:
+This installs all FCP servers automatically. Prerequisites by server:
 
 | Server | Requires |
 |--------|----------|
@@ -26,6 +26,27 @@ This installs all six FCP servers automatically. Prerequisites by server:
 | fcp-rust | rust-analyzer |
 | fcp-sheets | Python 3.13+ |
 | fcp-slides | Python 3.13+ |
+
+### Manual Installation (non-Claude Code)
+
+Each server can be installed and configured independently. Add to your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "fcp-drawio": {
+      "command": "npx",
+      "args": ["-y", "@aetherwing/fcp-drawio"]
+    },
+    "fcp-terraform": {
+      "command": "fcp-terraform"
+    }
+  }
+}
+```
+
+See each server's README for full installation instructions:
+[fcp-drawio](https://github.com/aetherwing-io/fcp-drawio) · [fcp-midi](https://github.com/aetherwing-io/fcp-midi) · [fcp-terraform](https://github.com/aetherwing-io/fcp-terraform) · [fcp-rust](https://github.com/aetherwing-io/fcp-rust) · [fcp-sheets](https://github.com/aetherwing-io/fcp-sheets) · [fcp-slides](https://github.com/aetherwing-io/fcp-slides)
 
 ## Quick Start
 
@@ -178,7 +199,6 @@ Most servers are built on [fcp-core](https://github.com/aetherwing-io/fcp-core) 
 - [Building an FCP server](docs/writing-an-fcp-server.md)
 - [Marketplace guide](docs/marketplace-guide.md)
 - [FCP specification](https://github.com/aetherwing-io/fcp-core/tree/main/spec)
-- [Plugin catalog](.claude-plugin/marketplace.json)
 
 ## License
 
