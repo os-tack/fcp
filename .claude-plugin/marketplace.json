@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "FCP plugin marketplace — MCP servers for complex file formats, Python/Rust codebases, and regex construction",
-    "version": "0.2.23"
+    "version": "0.2.24"
   },
   "plugins": [
     {
       "name": "fcp",
       "source": "./",
       "description": "All FCP servers — diagrams, infrastructure, music, spreadsheets, presentations, Python/Rust codebases, and regex construction",
-      "version": "0.2.23",
+      "version": "0.2.24",
       "license": "MIT",
       "category": "development",
       "keywords": ["fcp", "mcp", "drawio", "terraform", "midi", "sheets", "slides", "python", "rust", "regex"]
@@ -21,7 +21,7 @@
       "name": "fcp-drawio",
       "source": {"source": "github", "repo": "aetherwing-io/fcp-drawio"},
       "description": "Create and edit draw.io diagrams through intent-level commands",
-      "version": "0.2.9",
+      "version": "0.2.11",
       "license": "MIT",
       "category": "development",
       "keywords": ["drawio", "diagrams", "architecture", "mcp"]
@@ -30,7 +30,7 @@
       "name": "fcp-terraform",
       "source": {"source": "github", "repo": "aetherwing-io/fcp-terraform"},
       "description": "Generate Terraform HCL through resource declarations",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "license": "MIT",
       "category": "devops",
       "keywords": ["terraform", "hcl", "infrastructure", "mcp"]
@@ -39,7 +39,7 @@
       "name": "fcp-midi",
       "source": {"source": "github", "repo": "aetherwing-io/fcp-midi"},
       "description": "Semantic MIDI music composition",
-      "version": "0.1.9",
+      "version": "0.1.11",
       "license": "MIT",
       "category": "creative",
       "keywords": ["midi", "music", "composition", "mcp"]
@@ -48,7 +48,7 @@
       "name": "fcp-sheets",
       "source": {"source": "github", "repo": "aetherwing-io/fcp-sheets"},
       "description": "Semantic spreadsheet operations for LLMs",
-      "version": "0.1.12",
+      "version": "0.1.13",
       "license": "MIT",
       "category": "documents",
       "keywords": ["spreadsheet", "excel", "xlsx", "mcp"]
@@ -57,7 +57,7 @@
       "name": "fcp-slides",
       "source": {"source": "github", "repo": "aetherwing-io/fcp-slides"},
       "description": "Create and edit PowerPoint presentations through semantic commands",
-      "version": "0.1.2",
+      "version": "0.1.4",
       "license": "MIT",
       "category": "documents",
       "keywords": ["slides", "powerpoint", "pptx", "presentations", "mcp"]
@@ -75,7 +75,7 @@
       "name": "fcp-rust",
       "source": {"source": "github", "repo": "aetherwing-io/fcp-rust"},
       "description": "Query and refactor Rust codebases through intent-level commands",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "license": "MIT",
       "category": "development",
       "keywords": ["rust", "rust-analyzer", "refactoring", "mcp"]
@@ -84,7 +84,7 @@
       "name": "fcp-regex",
       "source": {"source": "github", "repo": "aetherwing-io/fcp-regex"},
       "description": "Build regexes via named fragment composition — no raw syntax, no escaping burden",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "license": "MIT",
       "category": "development",
       "keywords": ["regex", "pattern-matching", "composition", "mcp"]
