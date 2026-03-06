@@ -20,6 +20,10 @@
       "command": "uvx",
       "args": ["--refresh-package", "fcp-slides", "--python", "3.13", "fcp-slides"]
     },
+    "python": {
+      "command": "uvx",
+      "args": ["--refresh-package", "fcp-python", "--python", "3.13", "fcp-python"]
+    },
     "rust": {
       "command": "bash",
       "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/run-rust.sh"]
