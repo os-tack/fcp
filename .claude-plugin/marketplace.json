@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "FCP plugin marketplace — MCP servers for complex file formats, Python/Rust codebases, and regex construction",
-    "version": "0.2.22"
+    "version": "0.2.23"
   },
   "plugins": [
     {
       "name": "fcp",
       "source": "./",
       "description": "All FCP servers — diagrams, infrastructure, music, spreadsheets, presentations, Python/Rust codebases, and regex construction",
-      "version": "0.2.22",
+      "version": "0.2.23",
       "license": "MIT",
       "category": "development",
       "keywords": ["fcp", "mcp", "drawio", "terraform", "midi", "sheets", "slides", "python", "rust", "regex"]

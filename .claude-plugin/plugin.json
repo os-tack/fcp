@@ -1,7 +1,7 @@
 {
   "name": "fcp",
   "description": "All FCP servers — diagrams, infrastructure, music, spreadsheets, presentations, Python/Rust codebases, and regex construction",
-  "version": "0.2.22",
+  "version": "0.2.23",
   "license": "MIT",
   "author": {
     "name": "Scott Meyer"
