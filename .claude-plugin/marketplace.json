@@ -4,18 +4,18 @@
     "name": "Scott Meyer"
   },
   "metadata": {
-    "description": "FCP plugin marketplace — MCP servers for complex file formats, Rust codebases, and regex construction",
-    "version": "0.2.21"
+    "description": "FCP plugin marketplace — MCP servers for complex file formats, Python/Rust codebases, and regex construction",
+    "version": "0.2.22"
   },
   "plugins": [
     {
       "name": "fcp",
       "source": "./",
-      "description": "All FCP servers — diagrams, infrastructure, music, spreadsheets, presentations, Rust codebases, and regex construction",
-      "version": "0.2.21",
+      "description": "All FCP servers — diagrams, infrastructure, music, spreadsheets, presentations, Python/Rust codebases, and regex construction",
+      "version": "0.2.22",
       "license": "MIT",
       "category": "development",
-      "keywords": ["fcp", "mcp", "drawio", "terraform", "midi", "sheets", "slides", "rust", "regex"]
+      "keywords": ["fcp", "mcp", "drawio", "terraform", "midi", "sheets", "slides", "python", "rust", "regex"]
     },
     {
       "name": "fcp-drawio",
@@ -61,6 +61,15 @@
       "license": "MIT",
       "category": "documents",
       "keywords": ["slides", "powerpoint", "pptx", "presentations", "mcp"]
+    },
+    {
+      "name": "fcp-python",
+      "source": {"source": "github", "repo": "aetherwing-io/fcp-python"},
+      "description": "Query and refactor Python codebases through intent-level commands",
+      "version": "0.1.0",
+      "license": "MIT",
+      "category": "development",
+      "keywords": ["python", "pylsp", "refactoring", "code-intelligence", "mcp"]
     },
     {
       "name": "fcp-rust",
