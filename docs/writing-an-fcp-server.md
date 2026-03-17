@@ -4,9 +4,9 @@ Guide for building new FCP servers that plug into the marketplace.
 
 ## Prerequisites
 
-- [fcp-core](https://github.com/aetherwing-io/fcp-core) (TypeScript: `@aetherwing/fcp-core`, Python: `fcp-core`)
+- [fcp-core](https://github.com/os-tack/fcp-core) (TypeScript: `@os-tack/fcp-core`, Python: `fcp-core`)
 - Familiarity with the FCP grammar: `VERB [positionals...] [key:value params...] [@selectors...]`
-- For Go implementations, see [fcp-terraform](https://github.com/aetherwing-io/fcp-terraform) which ports fcp-core internally
+- For Go implementations, see [fcp-terraform](https://github.com/os-tack/fcp-terraform) which ports fcp-core internally
 
 ## The 4-Tool Contract
 
@@ -68,7 +68,7 @@ See the [Marketplace Guide](./marketplace-guide.md) for the exact schemas.
 
 ## Full Specification
 
-See the [FCP spec](https://github.com/aetherwing-io/fcp-core/tree/main/spec) in fcp-core for the complete grammar, tool, session, and event specifications.
+See the [FCP spec](https://github.com/os-tack/fcp-core/tree/main/spec) in fcp-core for the complete grammar, tool, session, and event specifications.
 
 ## Publishing
 

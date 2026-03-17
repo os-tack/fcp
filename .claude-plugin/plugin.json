@@ -6,6 +6,6 @@
   "author": {
     "name": "Scott Meyer"
   },
-  "repository": "https://github.com/aetherwing-io/fcp",
+  "repository": "https://github.com/os-tack/fcp",
   "keywords": ["fcp", "mcp", "drawio", "terraform", "midi", "sheets", "slides", "python", "rust", "regex"]
 }

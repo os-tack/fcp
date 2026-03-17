@@ -101,6 +101,6 @@ Add an entry to `.claude-plugin/marketplace.json`. Plugin names are kebab-case i
 
 ## Submission
 
-1. Fork [aetherwing-io/fcp](https://github.com/aetherwing-io/fcp)
+1. Fork [os-tack/fcp](https://github.com/os-tack/fcp)
 2. Add your entry to `.claude-plugin/marketplace.json`
 3. Open a PR with a link to your server's repository

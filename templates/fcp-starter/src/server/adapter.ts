@@ -8,7 +8,7 @@
  * real-world examples.
  */
 
-// import { FcpAdapter } from '@aetherwing/fcp-core';
+// import { FcpAdapter } from '@os-tack/fcp-core';
 
 export class YourDomainAdapter /* implements FcpAdapter */ {
   // TODO: Implement the FcpAdapter interface

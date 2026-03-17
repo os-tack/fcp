@@ -1,5 +1,5 @@
 {
-  "name": "@aetherwing/fcp-yourdomain",
+  "name": "@os-tack/fcp-yourdomain",
   "version": "0.1.0",
   "description": "TODO: FCP server for ...",
   "type": "module",
@@ -11,7 +11,7 @@
     "dev": "tsc --watch"
   },
   "dependencies": {
-    "@aetherwing/fcp-core": "^0.1.0",
+    "@os-tack/fcp-core": "^0.1.0",
     "@modelcontextprotocol/sdk": "^1.12.1"
   },
   "devDependencies": {

@@ -8,8 +8,8 @@ Three criteria: (1) format complexity that defeats raw LLM output, (2) clean map
 
 | Server | Package | Category | Description |
 |--------|---------|----------|-------------|
-| fcp-drawio | @aetherwing/fcp-drawio | development | draw.io diagram creation/editing |
-| fcp-terraform | github.com/aetherwing-io/fcp-terraform | devops | Terraform HCL generation (Go) |
+| fcp-drawio | @os-tack/fcp-drawio | development | draw.io diagram creation/editing |
+| fcp-terraform | github.com/os-tack/fcp-terraform | devops | Terraform HCL generation (Go) |
 | fcp-midi | fcp-midi | creative | Semantic MIDI composition |
 | fcp-sheets | fcp-sheets | documents | Semantic spreadsheet creation/editing |
 | fcp-slides | fcp-slides | documents | Semantic PowerPoint presentation creation |

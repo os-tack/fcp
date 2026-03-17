@@ -4,7 +4,7 @@
  * Wires up the domain adapter with createFcpServer() from fcp-core.
  */
 
-import { createFcpServer } from '@aetherwing/fcp-core';
+import { createFcpServer } from '@os-tack/fcp-core';
 import { YourDomainAdapter } from './adapter.js';
 import { VERBS } from './verb-registry.js';
 import { REFERENCE_CARD } from './reference-card.js';

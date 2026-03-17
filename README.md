@@ -11,7 +11,7 @@ FCP is a Claude Code marketplace plugin. Add it to your `settings.json`:
 ```json
 {
   "marketplace_plugins": {
-    "fcp@aetherwing-io/fcp": true
+    "fcp@os-tack/fcp": true
   }
 }
 ```
@@ -36,7 +36,7 @@ Each server can be installed and configured independently. Add to your MCP clien
   "mcpServers": {
     "fcp-drawio": {
       "command": "npx",
-      "args": ["-y", "@aetherwing/fcp-drawio"]
+      "args": ["-y", "@os-tack/fcp-drawio"]
     },
     "fcp-terraform": {
       "command": "fcp-terraform"
@@ -46,7 +46,7 @@ Each server can be installed and configured independently. Add to your MCP clien
 ```
 
 See each server's README for full installation instructions:
-[fcp-drawio](https://github.com/aetherwing-io/fcp-drawio) · [fcp-midi](https://github.com/aetherwing-io/fcp-midi) · [fcp-terraform](https://github.com/aetherwing-io/fcp-terraform) · [fcp-rust](https://github.com/aetherwing-io/fcp-rust) · [fcp-sheets](https://github.com/aetherwing-io/fcp-sheets) · [fcp-slides](https://github.com/aetherwing-io/fcp-slides)
+[fcp-drawio](https://github.com/os-tack/fcp-drawio) · [fcp-midi](https://github.com/os-tack/fcp-midi) · [fcp-terraform](https://github.com/os-tack/fcp-terraform) · [fcp-rust](https://github.com/os-tack/fcp-rust) · [fcp-sheets](https://github.com/os-tack/fcp-sheets) · [fcp-slides](https://github.com/os-tack/fcp-slides)
 
 ## Quick Start
 
@@ -88,12 +88,12 @@ Every FCP server follows this same pattern: `session` → `mutations` → `query
 
 | Server | Format | Description |
 |--------|--------|-------------|
-| [fcp-drawio](https://github.com/aetherwing-io/fcp-drawio) | draw.io diagrams | Architecture diagrams, flowcharts, ERDs |
-| [fcp-midi](https://github.com/aetherwing-io/fcp-midi) | MIDI music | Notes, chords, tracks, instruments |
-| [fcp-terraform](https://github.com/aetherwing-io/fcp-terraform) | Terraform HCL | AWS/GCP/Azure infrastructure |
-| [fcp-rust](https://github.com/aetherwing-io/fcp-rust) | Rust codebases | Navigation, inspection, refactoring via rust-analyzer |
-| [fcp-sheets](https://github.com/aetherwing-io/fcp-sheets) | Excel spreadsheets | Tables, formulas, charts, formatting |
-| [fcp-slides](https://github.com/aetherwing-io/fcp-slides) | PowerPoint presentations | Slides, shapes, tables, charts, layouts |
+| [fcp-drawio](https://github.com/os-tack/fcp-drawio) | draw.io diagrams | Architecture diagrams, flowcharts, ERDs |
+| [fcp-midi](https://github.com/os-tack/fcp-midi) | MIDI music | Notes, chords, tracks, instruments |
+| [fcp-terraform](https://github.com/os-tack/fcp-terraform) | Terraform HCL | AWS/GCP/Azure infrastructure |
+| [fcp-rust](https://github.com/os-tack/fcp-rust) | Rust codebases | Navigation, inspection, refactoring via rust-analyzer |
+| [fcp-sheets](https://github.com/os-tack/fcp-sheets) | Excel spreadsheets | Tables, formulas, charts, formatting |
+| [fcp-slides](https://github.com/os-tack/fcp-slides) | PowerPoint presentations | Slides, shapes, tables, charts, layouts |
 
 ## What the LLM Sees
 
@@ -192,13 +192,13 @@ Every FCP server exposes exactly 4 MCP tools:
 | `{domain}_session(action)` | Lifecycle: new, open, save, undo, redo |
 | `{domain}_help()` | Self-documenting reference card |
 
-Most servers are built on [fcp-core](https://github.com/aetherwing-io/fcp-core) (TypeScript + Python). fcp-terraform (Go) and fcp-rust (Rust) are standalone implementations.
+Most servers are built on [fcp-core](https://github.com/os-tack/fcp-core) (TypeScript + Python). fcp-terraform (Go) and fcp-rust (Rust) are standalone implementations.
 
 ## Links
 
 - [Building an FCP server](docs/writing-an-fcp-server.md)
 - [Marketplace guide](docs/marketplace-guide.md)
-- [FCP specification](https://github.com/aetherwing-io/fcp-core/tree/main/spec)
+- [FCP specification](https://github.com/os-tack/fcp-core/tree/main/spec)
 
 ## License
 

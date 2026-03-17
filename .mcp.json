@@ -6,7 +6,7 @@
     },
     "drawio": {
       "command": "npx",
-      "args": ["-y", "@aetherwing/fcp-drawio"]
+      "args": ["-y", "@os-tack/fcp-drawio"]
     },
     "midi": {
       "command": "uvx",
