@@ -31,6 +31,10 @@
     "regex": {
       "command": "bash",
       "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/run-regex.sh"]
+    },
+    "pdf": {
+      "command": "uvx",
+      "args": ["--refresh-package", "fcp-pdf", "--python", "3.13", "fcp-pdf"]
     }
   }
 }

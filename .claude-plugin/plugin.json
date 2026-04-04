@@ -1,11 +1,11 @@
 {
   "name": "fcp",
-  "description": "All FCP servers — diagrams, infrastructure, music, spreadsheets, presentations, Python/Rust codebases, and regex construction",
-  "version": "0.2.24",
+  "description": "All FCP servers — diagrams, infrastructure, music, spreadsheets, presentations, PDF documents, Python/Rust codebases, and regex construction",
+  "version": "0.2.25",
   "license": "MIT",
   "author": {
     "name": "Scott Meyer"
   },
   "repository": "https://github.com/os-tack/fcp",
-  "keywords": ["fcp", "mcp", "drawio", "terraform", "midi", "sheets", "slides", "python", "rust", "regex"]
+  "keywords": ["fcp", "mcp", "drawio", "terraform", "midi", "sheets", "slides", "pdf", "python", "rust", "regex"]
 }
