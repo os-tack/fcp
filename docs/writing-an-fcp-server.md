@@ -4,7 +4,7 @@ Guide for building new FCP servers that plug into the marketplace.
 
 ## Prerequisites
 
-- [fcp-core](https://github.com/os-tack/fcp-core) (TypeScript: `@os-tack/fcp-core`, Python: `fcp-core`)
+- [fcp-core](https://github.com/os-tack/fcp-core) (TypeScript: `@ostk-ai/fcp-core`, Python: `fcp-core`)
 - Familiarity with the FCP grammar: `VERB [positionals...] [key:value params...] [@selectors...]`
 - For Go implementations, see [fcp-terraform](https://github.com/os-tack/fcp-terraform) which ports fcp-core internally
 

@@ -8,7 +8,7 @@
  * real-world examples.
  */
 
-// import { FcpAdapter } from '@os-tack/fcp-core';
+// import { FcpAdapter } from '@ostk-ai/fcp-core';
 
 export class YourDomainAdapter /* implements FcpAdapter */ {
   // TODO: Implement the FcpAdapter interface

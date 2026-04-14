@@ -36,7 +36,7 @@ Each server can be installed and configured independently. Add to your MCP clien
   "mcpServers": {
     "fcp-drawio": {
       "command": "npx",
-      "args": ["-y", "@os-tack/fcp-drawio"]
+      "args": ["-y", "@ostk-ai/fcp-drawio"]
     },
     "fcp-terraform": {
       "command": "fcp-terraform"

@@ -30,7 +30,7 @@ Check for required FCP dependencies and install any that are missing.
 
 4. **Verify MCP servers** — for each newly installed dependency, verify the MCP server can start:
 
-   - drawio: `npx -y @os-tack/fcp-drawio --help` (or similar smoke test)
+   - drawio: `npx -y @ostk-ai/fcp-drawio --help` (or similar smoke test)
    - midi: `uvx --refresh-package fcp-midi --python 3.13 fcp-midi --help`
    - sheets: `uvx --refresh-package fcp-sheets --python 3.13 fcp-sheets --help`
    - terraform: `fcp-terraform --help`

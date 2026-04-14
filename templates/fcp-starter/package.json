@@ -1,5 +1,5 @@
 {
-  "name": "@os-tack/fcp-yourdomain",
+  "name": "@ostk-ai/fcp-yourdomain",
   "version": "0.1.0",
   "description": "TODO: FCP server for ...",
   "type": "module",
@@ -11,7 +11,7 @@
     "dev": "tsc --watch"
   },
   "dependencies": {
-    "@os-tack/fcp-core": "^0.1.0",
+    "@ostk-ai/fcp-core": "^0.1.0",
     "@modelcontextprotocol/sdk": "^1.12.1"
   },
   "devDependencies": {

@@ -7,7 +7,7 @@
  * See fcp-core/spec/grammar.md for the full grammar specification.
  */
 
-// import { VerbDefinition } from '@os-tack/fcp-core';
+// import { VerbDefinition } from '@ostk-ai/fcp-core';
 
 // TODO: Define your verbs
 // export const VERBS: VerbDefinition[] = [
